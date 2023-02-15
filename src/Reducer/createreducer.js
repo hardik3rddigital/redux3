@@ -3,6 +3,8 @@ const initialData = {
   studentId: 104,
 };
 
+
+
 const createreducer = (state = initialData, action) => {
   if (action.type === "ChangeName") {
     console.log(action);
@@ -20,7 +22,13 @@ const createreducer = (state = initialData, action) => {
     }
   }
 
-
+  if (action.type === "CollegeName") {
+    console.log(action);
+    return {
+      ...state,
+      studentname : action.payload,
+    }
+  }
 
   return state;
 };

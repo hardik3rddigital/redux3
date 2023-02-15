@@ -8,7 +8,7 @@ const App = () => {
                 <div className="container">
                     <div className="row">
                         <div className="">
-                            <h1>Hello World <Basic/></h1>
+                            <h1>Hello <Basic/></h1>
                         </div>
                     </div>
                 </div>
