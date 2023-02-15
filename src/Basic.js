@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { anothername } from "./Action/myaction";
+// import { newwindowload } from "./Action/windowload";
+// import { useDispatch, useSelector } from "react-redux";
 
 const Basic = (props) => {
   //console.log(props);
@@ -13,6 +15,14 @@ const Basic = (props) => {
     props.changeid("14");
   };
 
+  // const selectdata = useSelector((anyname)=>anyname);
+  // console.log(selectdata);
+
+  // console.log({windowload});
+  // console.log({newwindowload});
+
+// console.log({newwindowload});
+
   return (
     <>
       <span>
@@ -24,12 +34,19 @@ const Basic = (props) => {
           //   props.changename("HD");
           // }}
 
-          onClick={()=> {onclickgetdata(); onclickgetdata2();}}
+          onClick={() => {
+            onclickgetdata();
+            onclickgetdata2();
+          }}
         >
           Get Data
         </button>
       </span>
 
+      <div className="container">
+        
+
+      </div>
     </>
   );
 };
