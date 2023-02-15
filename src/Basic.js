@@ -7,13 +7,13 @@ import { anothername } from "./Action/myaction";
 const Basic = (props) => {
   //console.log(props);
 
-  const onclickgetdata = () => {
-    props.changename("HD");
-  };
+  // const onclickgetdata = () => {
+  //   props.changename("HD");
+  // };
 
-  const onclickgetdata2 = () => {
-    props.changeid("14");
-  };
+  // const onclickgetdata2 = () => {
+  //   props.changeid("14");
+  // };
 
   // const selectdata = useSelector((anyname)=>anyname);
   // console.log(selectdata);
@@ -30,14 +30,14 @@ const Basic = (props) => {
         <span>your Student id : {props.studid} </span>
         <button
           className="btn btn-primary"
-          // onClick={() => {
-          //   props.changename("HD");
-          // }}
-
           onClick={() => {
-            onclickgetdata();
-            onclickgetdata2();
+            props.changename("HD");
           }}
+
+          // onClick={() => {
+          //   onclickgetdata();
+          //   onclickgetdata2();
+          // }}
         >
           Get Data
         </button>
@@ -61,8 +61,8 @@ const mappingstate = (state) => {
 const changename2 = (argu) => {
   return {
     changename: (name) => {
-      //   argu({ type: "ChangeName", payload: name });
-      argu(anothername(name));
+        argu({ type: "ChangeName", payload: name });
+      // argu(anothername(name));
     },
     changeid: (id) => {
       argu({ type: "ChangeID", payload: id });

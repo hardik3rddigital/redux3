@@ -1,12 +1,18 @@
-import { legacy_createStore as createStore, applyMiddleware } from "redux";
+import { legacy_createStore as createStore, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
 import createreducer from "../Reducer/createreducer";
+import newupdatedreducer from "../Reducer/newupdatedreducer";
+
+const masterreducer = ()=> combineReducers({
+    name:createreducer,
+    wish:newupdatedreducer
+})
 
 const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__);
 
 
 
-const reduxstore = createStore(createreducer, composeEnhancers(applyMiddleware(thunk)));
+const reduxstore = createStore(masterreducer,{name:'H D Satapara'}, composeEnhancers(applyMiddleware(thunk)));
 export default reduxstore;
 
 
