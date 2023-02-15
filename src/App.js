@@ -1,7 +1,7 @@
 import React from "react";
 import Basic from "./Basic";
 
-const App = (props) => {
+const App = () => {
     return(
         <>
             <div className="header">
